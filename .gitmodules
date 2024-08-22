@@ -1,3 +1,6 @@
 [submodule "UVU_DGM1610_Code"]
 	path = UVU_DGM1610_Code
 	url = https://github.com/NeuHorizons/UVU_DGM1610_Code
+[submodule "Tools-Scripts"]
+	path = Tools-Scripts
+	url = https://github.com/NeuHorizons/Tools-Scripts
