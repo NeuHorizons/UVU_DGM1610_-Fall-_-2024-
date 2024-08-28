@@ -9,7 +9,9 @@ public class LevelManager : MonoBehaviour
 
     void Start()
     {
-        
+        // Set the slider's max value to the experience needed for the next level
+        levelBar.maxValue = playerExperience.experienceToNextLevel;
+        levelBar.value = playerExperience.experience;
     }
 
     public void AddExperience(float amount)
@@ -21,6 +23,7 @@ public class LevelManager : MonoBehaviour
             Debug.Log("Experience threshold reached. Calling LevelUp.");
             LevelUp();
         }
+        levelBar.value = playerExperience.experience;
     }
     
     private void LevelUp()
@@ -29,5 +32,9 @@ public class LevelManager : MonoBehaviour
         playerExperience.experience = 0; // Reset experience for the new level.
         LevelData.LevelUp(); // Increase player level.
         Debug.Log("Level Up! New Level: " + LevelData.level);
+        
+        // Reset the slider for the new level.
+        levelBar.maxValue = playerExperience.experienceToNextLevel;
+        levelBar.value = playerExperience.experience;
     }
 }
