@@ -16,24 +16,31 @@ public class LevelManager : MonoBehaviour
     {
         playerExperience.AddExperience(amount);
         UpdateLevelBar();
+        Debug.Log("Added experience: " + amount + ", Total experience: " + playerExperience.experience);
 
         if (playerExperience.experience >= playerExperience.experienceToNextLevel)
         {
+            Debug.Log("Experience threshold reached. Calling LevelUp.");
             LevelUp();
         }
+        else
+        {
+            Debug.Log("Experience not enough to level up. Current experience: " + playerExperience.experience);
+        }
     }
+
 
     private void UpdateLevelBar()
     {
         levelBar.value = playerExperience.GetExperiencePercentage();
+        Debug.Log("Updated level bar: " + levelBar.value);
     }
 
     private void LevelUp()
     {
+        Debug.Log("Leveling up... Current level: " + playerLevel.level);
         playerExperience.experience = 0; // Reset experience for the new level.
-        playerLevel.LevelUp();
-        // You might want to increase the `experienceToNextLevel` for the new level.
-        playerExperience.experienceToNextLevel *= 1.2f; // Example of making it more challenging.
+        playerLevel.LevelUp(); // Increase player level.
         UpdateLevelBar();
         Debug.Log("Level Up! New Level: " + playerLevel.level);
     }
