@@ -475,7 +475,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerExperience: {fileID: 11400000, guid: 72b2f41a8444bd843aad815555effad5, type: 2}
-  playerLevel: {fileID: 11400000, guid: e2a243aea56742c44ad47aeaacd105ac, type: 2}
+  LevelData: {fileID: 11400000, guid: e2a243aea56742c44ad47aeaacd105ac, type: 2}
   levelBar: {fileID: 1570154595}
 --- !u!1 &1097520450
 GameObject:
@@ -532,7 +532,7 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 291542deef2860f478900c1617ecb4cc, type: 2}
+      - m_Target: {fileID: 11400000, guid: 60a9a109ede1c6a4ab4ac13ad31fe02b, type: 2}
         m_TargetAssemblyTypeName: DataStorage, Assembly-CSharp
         m_MethodName: UpdateValue
         m_Mode: 4
@@ -792,7 +792,7 @@ MonoBehaviour:
   triggerEnterEvent:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 11400000, guid: 291542deef2860f478900c1617ecb4cc, type: 2}
+      - m_Target: {fileID: 11400000, guid: 60a9a109ede1c6a4ab4ac13ad31fe02b, type: 2}
         m_TargetAssemblyTypeName: DataStorage, Assembly-CSharp
         m_MethodName: UpdateValue
         m_Mode: 4
@@ -1088,7 +1088,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 0}
-  dataObj: {fileID: 11400000, guid: 291542deef2860f478900c1617ecb4cc, type: 2}
+  dataObj: {fileID: 11400000, guid: 60a9a109ede1c6a4ab4ac13ad31fe02b, type: 2}
 --- !u!114 &1370204126
 MonoBehaviour:
   m_ObjectHideFlags: 0

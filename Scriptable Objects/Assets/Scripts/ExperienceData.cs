@@ -10,18 +10,7 @@ public class ExperienceData : ScriptableObject
     {
         experience += amount;
         Debug.Log("Current experience: " + experience + " / " + experienceToNextLevel);
-
-        if (experience >= experienceToNextLevel)
-        {
-            experience -= experienceToNextLevel; // Carry over the excess experience
-            Debug.Log("Experience carried over, new experience: " + experience);
-            // Optionally increase the experience required for the next level.
-            // experienceToNextLevel += someValue;
-        }
     }
 
-    public float GetExperiencePercentage()
-    {
-        return experience / experienceToNextLevel;
-    }
+   
 }
