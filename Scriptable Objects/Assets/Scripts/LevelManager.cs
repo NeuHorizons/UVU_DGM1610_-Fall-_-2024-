@@ -6,12 +6,14 @@ public class LevelManager : MonoBehaviour
     public ExperienceData playerExperience;
     public LevelData LevelData;
     public Slider levelBar;
+    public Text levelText;
 
     void Start()
     {
         // Set the slider's max value to the experience needed for the next level
         levelBar.maxValue = playerExperience.experienceToNextLevel;
         levelBar.value = playerExperience.experience;
+        UpdateLevelText();
     }
 
     public void AddExperience(float amount)
@@ -36,5 +38,12 @@ public class LevelManager : MonoBehaviour
         // Reset the slider for the new level.
         levelBar.maxValue = playerExperience.experienceToNextLevel;
         levelBar.value = playerExperience.experience;
+        
+        UpdateLevelText();
+    }
+    private void UpdateLevelText()
+    {
+        // This updates the levelText to show the current level
+        levelText.text = "Level: " + LevelData.level.ToString();
     }
 }
