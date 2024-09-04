@@ -440,6 +440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 957597591}
   - component: {fileID: 957597592}
+  - component: {fileID: 957597593}
   m_Layer: 0
   m_Name: LevelManager
   m_TagString: Untagged
@@ -478,6 +479,37 @@ MonoBehaviour:
   LevelData: {fileID: 11400000, guid: e2a243aea56742c44ad47aeaacd105ac, type: 2}
   levelBar: {fileID: 1570154595}
   levelText: {fileID: 1263479974}
+--- !u!114 &957597593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 957597590}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d879727036f407448621905f6a13a72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Xp: {fileID: 1317659988}
+  onTeleport:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  objectToTeleport: {fileID: 1317659990}
+  minPosition: {x: 0, y: 0, z: 0}
+  maxPosition: {x: 5, y: 5, z: 0}
 --- !u!1 &1097520450
 GameObject:
   m_ObjectHideFlags: 0
@@ -997,7 +1029,7 @@ Transform:
   m_GameObject: {fileID: 1317659988}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.68, y: 2.25, z: 0}
+  m_LocalPosition: {x: 0.83, y: 2.42, z: 0}
   m_LocalScale: {x: 0.32825, y: 0.32825, z: 0.32825}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1015,6 +1047,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5534577c1b16a2244a10b967397ae473, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Xp:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 957597593}
+        m_TargetAssemblyTypeName: RandomTeleport, Assembly-CSharp
+        m_MethodName: TeleportObject
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 1
   levelManager: {fileID: 957597592}
   xp: 10
 --- !u!135 &1317659992
@@ -1489,7 +1536,7 @@ Transform:
   m_GameObject: {fileID: 2112361762}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.19, y: 0.03, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []

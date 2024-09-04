@@ -1,8 +1,9 @@
 using UnityEditorInternal;
 using UnityEngine;
-
+using UnityEngine.Events;
 public class EnemyDefeat : MonoBehaviour
 {
+    [SerializeField] private UnityEvent Xp;
     public LevelManager levelManager;
     public float xp;
     
@@ -12,6 +13,7 @@ public class EnemyDefeat : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
+            Xp.Invoke();
             OnEnemyDefeated();
         }
     }
