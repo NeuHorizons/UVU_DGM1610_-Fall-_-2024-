@@ -7,14 +7,14 @@ using UnityEngine.Events;
 public class MatchingBehaviours : MonoBehaviour
 {
     public ID idObj; 
-    public UnityEvent MatchEvent, NotMatchEvent;
+    public UnityEvent MatchEvent, NotMatchEvent, noMatchDelayedEvent;
 
    
-    private void OnTriggerEnter(Collider other)
+    private IEnumerator OnTriggerEnter(Collider other)
     {
         var tempObj = other.GetComponent<IDContainersBehaviours>();
         if (tempObj == null)
-            return;
+            yield break;
 
         var otherID = tempObj.idObj;
         if (otherID == idObj)
@@ -24,6 +24,8 @@ public class MatchingBehaviours : MonoBehaviour
         else
         {
             NotMatchEvent.Invoke();
+            yield return new WaitForSeconds(0.5f);
+            noMatchDelayedEvent.Invoke();
         }
     }
 }
