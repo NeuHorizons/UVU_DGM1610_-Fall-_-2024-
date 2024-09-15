@@ -18,7 +18,7 @@ public class ColorIDDataList : ScriptableObject
             return;
         }
 
-        num = Random.Range(0, colorIDList.Count);  // Generate a random index between 0 and the number of colors
-        currentColor = colorIDList[num];           // Set the currentColor to the randomly selected one
+        num = Random.Range(0, colorIDList.Count); 
+        currentColor = colorIDList[num];           
     }
 }
