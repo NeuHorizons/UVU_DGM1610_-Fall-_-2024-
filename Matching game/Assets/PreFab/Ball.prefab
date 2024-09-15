@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: -7243935687262891131}
   - component: {fileID: -6290109297891589230}
   - component: {fileID: 1162579115446711372}
-  - component: {fileID: 2526077902479817762}
+  - component: {fileID: 311575070172066868}
   m_Layer: 0
   m_Name: Ball
   m_TagString: Untagged
@@ -181,13 +181,25 @@ MonoBehaviour:
   startEvent:
     m_PersistentCalls:
       m_Calls:
+      - m_Target: {fileID: 11400000, guid: e613e9cb4fbb5394fb19fd9480f93326, type: 2}
+        m_TargetAssemblyTypeName: ColorIDDataList, Assembly-CSharp
+        m_MethodName: SetCurrentColorRandomly
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
       - m_Target: {fileID: -6290109297891589230}
         m_TargetAssemblyTypeName: SpriteBehaviour, Assembly-CSharp
         m_MethodName: ChangeRendererColor
         m_Mode: 2
         m_Arguments:
           m_ObjectArgument: {fileID: 11400000, guid: e613e9cb4fbb5394fb19fd9480f93326, type: 2}
-          m_ObjectArgumentAssemblyTypeName: ColorIdDataList, Assembly-CSharp
+          m_ObjectArgumentAssemblyTypeName: ColorIDDataList, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -197,7 +209,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   holdTime: 0.1
---- !u!114 &2526077902479817762
+--- !u!114 &311575070172066868
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -209,7 +221,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5174c1c6da7f00418dc7505b10a0d9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  idObj: {fileID: 11400000, guid: 4ba2b849b00536148bae46ce91c59d55, type: 2}
+  idObj: {fileID: 0}
   startEvent:
     m_PersistentCalls:
       m_Calls: []

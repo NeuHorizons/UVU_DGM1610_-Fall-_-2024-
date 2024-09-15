@@ -5,7 +5,7 @@ public class SpriteBehaviour : MonoBehaviour
 {
     private SpriteRenderer rendererObj;
 
-    // Event function
+  
     private void Awake()
     {
         rendererObj = GetComponent<SpriteRenderer>();
@@ -16,7 +16,7 @@ public class SpriteBehaviour : MonoBehaviour
         rendererObj.color = obj.value;
     }
 
-    public void ChangeRendererColor(ColorIdDataList obj)
+    public void ChangeRendererColor(ColorIDDataList obj)
     {
         rendererObj.color = obj.currentColor.value;
     }
