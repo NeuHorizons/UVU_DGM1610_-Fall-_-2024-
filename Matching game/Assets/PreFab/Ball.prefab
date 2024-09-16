@@ -174,30 +174,6 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 11400000, guid: e613e9cb4fbb5394fb19fd9480f93326, type: 2}
-        m_TargetAssemblyTypeName: ColorIDDataList, Assembly-CSharp
-        m_MethodName: SetCurrentColorRandomly
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: TextLabelBehaviour, Assembly-CSharp
-        m_MethodName: UpdateLabel
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: 9731968ab27561b4cb40b2d1a2a135bf, type: 2}
-          m_ObjectArgumentAssemblyTypeName: IntData, Assembly-CSharp
-          m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
       - m_Target: {fileID: 1305624355242651248}
         m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
         m_MethodName: Play
@@ -205,18 +181,6 @@ MonoBehaviour:
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 10
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 6338382474111071877}
-        m_TargetAssemblyTypeName: SpriteBehaviour, Assembly-CSharp
-        m_MethodName: ChangeRendererColor
-        m_Mode: 2
-        m_Arguments:
-          m_ObjectArgument: {fileID: 11400000, guid: e613e9cb4fbb5394fb19fd9480f93326, type: 2}
-          m_ObjectArgumentAssemblyTypeName: ColorIDDataList, Assembly-CSharp
           m_IntArgument: 10
           m_FloatArgument: 0
           m_StringArgument: 
@@ -262,18 +226,6 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: SetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: GameOver
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 4690032293334133343}
