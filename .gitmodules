@@ -4,3 +4,6 @@
 [submodule "Tools-Scripts"]
 	path = Tools-Scripts
 	url = https://github.com/NeuHorizons/Tools-Scripts
+[submodule "Code-Submodules"]
+	path = Code-Submodules
+	url = https://github.com/NeuHorizons/Code-Submodules
