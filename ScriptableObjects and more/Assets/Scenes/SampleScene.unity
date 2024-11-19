@@ -246,6 +246,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4387191831037642482, guid: 7bc99357d866fb541b9f20ccbbefc43e, type: 3}
+      propertyPath: animator
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9018100313917766827, guid: 7bc99357d866fb541b9f20ccbbefc43e, type: 3}
       propertyPath: m_Materials.Array.size
       value: 0
@@ -264,6 +268,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2641060743668342118, guid: 7bc99357d866fb541b9f20ccbbefc43e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 425197317}
+    - targetCorrespondingSourceObject: {fileID: 2641060743668342118, guid: 7bc99357d866fb541b9f20ccbbefc43e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 425197320}
   m_SourcePrefab: {fileID: 100100000, guid: 7bc99357d866fb541b9f20ccbbefc43e, type: 3}
 --- !u!21 &127708060
 Material:
@@ -599,7 +606,19 @@ MonoBehaviour:
         m_CallState: 2
   startEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: UnityEngine.Behaviour, UnityEngine
+        m_MethodName: set_enabled
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   onEnableEvent:
     m_PersistentCalls:
       m_Calls: []
@@ -609,6 +628,20 @@ MonoBehaviour:
   onDestroyEvent:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &425197320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 425197313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 84a13c3e018d5f14c9aa229d0cee19f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 45470968}
+  movementThreshold: 0.01
 --- !u!114 &471483584
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1854,7 +1887,8 @@ PrefabInstance:
       value: Run Cycle
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -840777845830954692, guid: 90e0e8a9bdab356459caceedaab2c4b3, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 90e0e8a9bdab356459caceedaab2c4b3, type: 3}

@@ -34,6 +34,7 @@ public class FPSController : MonoBehaviour
 
     public bool canMove = true; // Flag to enable or disable player movement
     private bool isCrouching = false; // Flag to check if the player is crouching
+    private Animator animator;
 
     // Reference to the CharacterController component
     CharacterController characterController;
@@ -41,9 +42,8 @@ public class FPSController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        // Get the CharacterController component attached to the GameObject
         characterController = GetComponent<CharacterController>();
-        // Lock the cursor to the center of the screen and make it invisible
+        animator = GetComponent<Animator>();
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
         // Store the original height of the CharacterController
@@ -54,21 +54,35 @@ public class FPSController : MonoBehaviour
     void Update()
     {
         #region Handles Movement
-        // Calculate the forward and right vectors relative to the player's orientation
-        Vector3 forward = transform.TransformDirection(Vector3.forward);
-        Vector3 right = transform.TransformDirection(Vector3.right);
+// Calculate the forward and right vectors relative to the player's orientation
+    Vector3 forward = transform.TransformDirection(Vector3.forward);
+    Vector3 right = transform.TransformDirection(Vector3.right);
 
-        // Check if the player is holding the Left Shift key to run
-        bool isRunning = Input.GetKey(KeyCode.LeftShift);
-        // Determine the current speed based on whether the player is running or walking and moving forward or backward
-        float curSpeedX = canMove ? (isRunning ? runSpeed : (isCrouching ? crouchSpeed : walkSpeed)) * Input.GetAxis("Vertical") : 0;
-        // Determine the current speed based on whether the player is running or walking and moving left or right
-        float curSpeedY = canMove ? (isRunning ? runSpeed : (isCrouching ? crouchSpeed : walkSpeed)) * Input.GetAxis("Horizontal") : 0;
-        // Store the current vertical movement direction
-        float movementDirectionY = moveDirection.y;
-        // Calculate the new movement direction
-        moveDirection = (forward * curSpeedX) + (right * curSpeedY);
-        #endregion
+// Check if the player is holding the Left Shift key to run
+    bool isRunning = Input.GetKey(KeyCode.LeftShift);
+
+// Determine the current speed based on whether the player is running or walking and moving forward or backward
+    float curSpeedX = canMove ? (isRunning ? runSpeed : (isCrouching ? crouchSpeed : walkSpeed)) * Input.GetAxis("Vertical") : 0;
+
+// Determine the current speed based on whether the player is running or walking and moving left or right
+    float curSpeedY = canMove ? (isRunning ? runSpeed : (isCrouching ? crouchSpeed : walkSpeed)) * Input.GetAxis("Horizontal") : 0;
+
+// Store the current vertical movement direction
+    float movementDirectionY = moveDirection.y;
+
+// Calculate the new movement direction
+    moveDirection = (forward * curSpeedX) + (right * curSpeedY);
+
+// Check if the player is moving (ignoring vertical movement for this check)
+    bool isMoving = curSpeedX != 0 || curSpeedY != 0;
+
+// Set the 'isMoving' parameter in the Animator based on movement
+        if (animator != null)
+    {
+        animator.SetBool("isMoving", isMoving);
+    }
+
+    #endregion
 
         #region Handles Jumping
         // Check if the player pressed the Jump button, can move, and is on the ground
